@@ -1,0 +1,335 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <title>AIKE - Ecommerce Landing Page</title>
+</head>
+
+<body>
+    <!-- Desktop Header -->
+    <header class="container header header-desktop">
+        <a href="#" class="logo">AIKE</a>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#category">Category</a></li>
+                <li><a href="#promo">Promo</a></li>
+                <li><a href="#interior">Interior Design</a></li>
+                <li><a href="#recommendation">Product Recommendation</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <img src="img/svg/magnifying-glass-backup-svgrepo-com.svg" alt="Search Icon">
+            <input type="text" placeholder="Product Search" class="input-field">
+        </div>
+        <ul class="user-actions">
+            <li><a href="#"><img src="img/svg/cart-shopping-svgrepo-com.svg" alt="Cart"></a></li>
+            <li><a href="#"><img src="img/svg/heart-svgrepo-com.svg" alt="Wishlist"></a></li>
+            <li><a href="#"><img src="img/svg/person-svgrepo-com.svg" alt="User"></a></li>
+        </ul>
+
+        <!-- Mobile Header -->
+        <div class="header-mobile">
+            <button type="button" class="toggle-btn" onclick="toggleDropdown()" aria-expanded="false"
+                aria-controls="navbar-mobile">
+                <img src="img/svg/nav-icon-svgrepo-com.svg" alt="Navigation Toggle">
+            </button>
+            <div class="mobile-menu" id="mobile-menu">
+                <nav class="navbar" id="navbar-mobile">
+                    <ul class="nav-links">
+                        <li><a href="#category">Category</a></li>
+                        <li><a href="#promo">Promo</a></li>
+                        <li><a href="#interior">Interior Design</a></li>
+                        <li><a href="#recommendation">Product Recommendation</a></li>
+                    </ul>
+                </nav>
+                <div class="search-bar" id="search-bar-mobile">
+                    <img src="img/svg/magnifying-glass-backup-svgrepo-com.svg" alt="Search Icon">
+                    <input type="text" placeholder="Product Search" class="input-field">
+                </div>
+                <ul class="user-actions" id="user-actions-mobile">
+                    <li><a href="#"><img src="img/svg/cart-shopping-svgrepo-com.svg" alt="Cart"></a></li>
+                    <li><a href="#"><img src="img/svg/heart-svgrepo-com.svg" alt="Wishlist"></a></li>
+                    <li><a href="#"><img src="img/svg/person-svgrepo-com.svg" alt="User"></a></li>
+                </ul>
+            </div>
+            <div id="body-overlay" class="overlay" onclick="toggleDropdown()"></div>
+        </div>
+
+    </header>
+
+
+
+
+
+    <section class="container">
+        <div class="home-section">
+            <div class="home-content home-left">
+                <h1 class="text-xl">
+                    Discover elegant & affordable furniture for every room
+                </h1>
+                <p class="text-nm">Transform your furniture with sophisticated and stylish pieces, and create
+                    a serene and inviting home.</p>
+                <ul class="home-actions">
+                    <li><a href="#" class="btn btn-lg" title="Shop Now">Shop Now</a></li>
+                    <li><a href="#" title="Free delivery"><img src="img/svg/truck-fast-svgrepo-com.svg" alt=""> Free
+                            delivery</a></li>
+                    <li><a href="#" title="Always on-time"><img src="img/svg/clock-seven-svgrepo-com.svg" alt=""> Always
+                            on-time</a></li>
+                </ul>
+            </div>
+            <div class="home-right">
+                <div class="product-section">
+                    <div class="product-sale">
+                        <img src="img/living-room.jpg" alt="Living Room">
+                    </div>
+                    <div class="slogan">
+                        <img src="img/living-room.jpg" alt="Slogan Image">
+                        <p class="text-nm">Modern & stylish Furniture</p>
+                    </div>
+                </div>
+                <div class="person-section">
+                    <div class="agent">
+                        <img src="img/living-room.jpg" alt="Agent">
+                        <div class="job-desk">
+                            <p>Name Person</p>
+                            <p class="text-nm">Job description</p>
+                        </div>
+                    </div>
+                    <div class="buyer">
+                        <img src="img/living-room.jpg" alt="Buyer">
+                        <div class="items-sold">
+                            <img src="https://via.placeholder.com/30" alt="User 1">
+                            <img src="https://via.placeholder.com/30" alt="User 2">
+                            <img src="https://via.placeholder.com/30" alt="User 3">
+                            <div class="items-sold-count">120,000+
+                                <div class="sold-label">Items sold out</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="container">
+        <div class="product-title">
+            <a href="#" class="btn-normal ">Popular</a>
+            <p class="text-xl">Furniture For Sale</p>
+        </div>
+
+        <div class="swiper swiper1">
+
+            <div class="products swiper-wrapper">
+                <!-- Product 1 -->
+                <div class="product-card swiper-slide">
+                    <img src="img/living-room.jpg" alt="KALLAX">
+                    <div class="product-name">KALLAX</div>
+                    <div class="product-price">$25.00</div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card swiper-slide">
+                    <img src="img/home-office.jpg" alt="MAMMUT">
+                    <div class="product-name">MAMMUT</div>
+                    <div class="product-price">$12.00</div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card swiper-slide">
+                    <img src="img/Kursi.jpg" alt="ARKELSTORP">
+                    <div class="product-name">ARKELSTORP</div>
+                    <div class="product-price">$65.00</div>
+                </div>
+
+                <!-- Product 1 -->
+                <div class="product-card swiper-slide">
+                    <img src="img/living-room.jpg" alt="KALLAX">
+                    <div class="product-name">KALLAX</div>
+                    <div class="product-price">$25.00</div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card swiper-slide">
+                    <img src="img/home-office.jpg" alt="MAMMUT">
+                    <div class="product-name">MAMMUT</div>
+                    <div class="product-price">$12.00</div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card swiper-slide">
+                    <img src="img/Kursi.jpg" alt="ARKELSTORP">
+                    <div class="product-name">ARKELSTORP</div>
+                    <div class="product-price">$65.00</div>
+                </div>
+            </div>
+            <div class="swiper-button-prev">
+                <img src="img/svg/arrow-narrow-circle-broken-left-svgrepo-com.svg" alt="Previous">
+            </div>
+
+            <!-- Custom Next Button with SVG Image -->
+            <div class="swiper-button-next">
+                <img src="img/svg/arrow-narrow-circle-broken-down-svgrepo-com.svg" alt="Next">
+            </div>
+            <div class=" swiper-pagination"></div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="category-title">
+            <a href="#" class="btn-normal ">Category</a>
+            <p class="text-xl">Design your perfect home</p>
+        </div>
+
+        <div class="swiper swiper2">
+            <div class="category swiper-wrapper">
+                <!-- Category 1 -->
+                <div class="category-card swiper-slide">
+                    <img src="img/living-room.jpg" alt="KALLAX">
+                    <div class="category-name">Lifing Room</div>
+                </div>
+
+                <!-- Category 2 -->
+                <div class="category-card swiper-slide">
+                    <img src="img/home-office.jpg" alt="MAMMUT">
+                    <div class="category-name">Dining Room</div>
+                </div>
+
+                <!-- Category 3 -->
+                <div class="category-card swiper-slide">
+                    <img src="img/Kursi.jpg" alt="ARKELSTORP">
+                    <div class="category-name">Home Office</div>
+                </div>
+
+                <!-- Category 4 -->
+                <div class="category-card swiper-slide">
+                    <img src="img/Kursi.jpg" alt="ARKELSTORP">
+                    <div class="category-name">Bedroom</div>
+                </div>
+
+                <!-- Category 4 -->
+                <div class="category-card swiper-slide">
+                    <img src="img/Kursi.jpg" alt="ARKELSTORP">
+                    <div class="category-name">Outoor</div>
+                </div>
+            </div>
+            <div class="swiper-button-prev">
+                <img src="img/svg/arrow-narrow-circle-broken-left-svgrepo-com.svg" alt="Previous">
+            </div>
+
+            <!-- Custom Next Button with SVG Image -->
+            <div class="swiper-button-next">
+                <img src="img/svg/arrow-narrow-circle-broken-down-svgrepo-com.svg" alt="Next">
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </section>
+
+    <!-- Bottom-section -->
+
+    <section class="container">
+        <div class="bottom-section">
+            <div class="img-bottom">
+                <img src="img/living-romm-2.jpg" alt="">
+            </div>
+            <div class="bottom-context">
+                <h2>Our Ambtion</h2>
+                <p class="text-lg">Pionnering innovation and exellence in furniture</p>
+                <p class="text-nm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia modi
+                    voluptatum,
+                    reprehenderit sit
+                    deleniti corporis provident quia nemo veritatis quasi repudiandae corrupti excepturi earum enim
+                    rerum eos amet voluptatibus eum!</p>
+                <a href="about" class="btn btn-lg">Learn more</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="colection">
+            <div class="headline-colection">
+                <h2 class="text-xl">We meticulously curate our <mark>product selections</mark> to ensure you receive
+                    only the
+                    best.</h2>
+            </div>
+        </div>
+
+        <div class="images-colection">
+            <div class="colection-left"><img src="img/home-office.jpg" alt="Product 1">
+                <img src="img/Kursi.jpg" alt="Product 2">
+                <img src="img/living-romm-2.jpg" alt="Product 3">
+            </div>
+            <div class="colection-right">
+                <img src="img/living-room.jpg" alt="Product 4">
+                <img src="img/picture-frame-by-velvet-armchair.jpg" alt="Product 5">
+                <img src="img/vertical-shot-wooden-chair-white.jpg" alt="Product 6">
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="container footer">
+        <div class="footer-row">
+            <div class="footer-col">
+                <h4>AIKE</h4>
+            </div>
+
+            <div class="footer-col">
+                <button type="button" class="dropdown-btn">
+                    <h4>Company</h4>
+                </button>
+                <ul class="links">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <button type="button" class="dropdown-btn">
+                    <h4>Category</h4>
+                </button>
+                <ul class="links">
+                    <li><a href="#">Living Room</a></li>
+                    <li><a href="#">Dining Room</a></li>
+                    <li><a href="#">Home Office</a></li>
+                    <li><a href="#">Bedroom</a></li>
+                    <li><a href="#">Outdoor</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-wrapper">
+                <h4>Join our Newsletter</h4>
+                <form action="#">
+                    <div class="input-container">
+                        <input type="text" placeholder="Your email" required>
+                        <button type="submit">
+                            <img src="img/svg/arrow-sm-right-svgrepo-com.svg" alt="">
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="copyright text-nm">
+            <p>
+                Copyright © 2024 AIKE. All rights reserved.
+            </p>
+            <p>
+                Terms of Condition.
+            </p>
+            <p>
+                Privacy Policy.
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
