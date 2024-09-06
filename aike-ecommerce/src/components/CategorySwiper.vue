@@ -1,6 +1,6 @@
 <!-- src/components/CategorySwiper.vue -->
 <template>
-  <div class="swiper swiper2">
+  <div class="swiper">
     <swiper :modules="[Navigation, Pagination]" navigation pagination>
       <swiper-slide
         class="category-card"

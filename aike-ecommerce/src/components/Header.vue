@@ -11,34 +11,28 @@
       </ul>
     </nav>
     <div class="search-bar">
-      <img
-        src=".assets/img/svg/magnifying-glass-backup-svgrepo-com.svg"
-        alt="Search Icon"
-      />
+      <img :src="magGlass" alt="Search Icon" />
       <input type="text" placeholder="Product Search" class="input-field" />
     </div>
     <ul class="user-actions">
       <li>
-        <a href="#"
-          ><img src=".src/img/svg/cart-shopping-svgrepo-com.svg" alt="Cart"
-        /></a>
+        <a href="#"><img :src="cartShop" alt="Cart" /></a>
       </li>
       <li>
-        <a href="#"
-          ><img src=".src/img/svg/heart-svgrepo-com.svg" alt="Wishlist"
-        /></a>
+        <a href="#"><img :src="heart" alt="Wishlist" /></a>
       </li>
       <li>
-        <a href="#"
-          ><img src=".src/img/svg/person-svgrepo-com.svg" alt="User"
-        /></a>
+        <a href="#"><img :src="imageSrc" alt="User" /></a>
       </li>
     </ul>
   </header>
 </template>
 
 <script setup>
-// No specific functionality needed for now
+import magGlass from "@/assets/img/svg/magnifying-glass-backup-svgrepo-com.svg";
+import cartShop from "@/assets/img/svg/cart-shopping-svgrepo-com.svg";
+import heart from "@/assets/img/svg/heart-svgrepo-com.svg";
+import imageSrc from "@/assets/img/svg/person-svgrepo-com.svg";
 </script>
 
 <style scoped>

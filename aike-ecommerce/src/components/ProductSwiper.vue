@@ -1,6 +1,6 @@
 <!-- src/components/ProductSwiper.vue -->
 <template>
-  <div class="swiper swiper1">
+  <div class="swiper">
     <swiper :modules="[Navigation, Pagination]" navigation pagination>
       <swiper-slide
         class="product-card"
@@ -21,11 +21,15 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/swiper-bundle.css";
 import { Navigation, Pagination } from "swiper/modules";
 
+// Import images directly
+import livingRoom from "@/assets/img/living-room.jpg";
+import homeOffice from "@/assets/img/home-office.jpg";
+import kursi from "@/assets/img/Kursi.jpg";
+
 const products = ref([
-  { name: "KALLAX", price: "$25.00", image: "img/living-room.jpg" },
-  { name: "MAMMUT", price: "$12.00", image: "img/home-office.jpg" },
-  { name: "ARKELSTORP", price: "$65.00", image: "img/Kursi.jpg" },
-  // More products as needed
+  { name: "KALLAX", price: "$25.00", image: livingRoom },
+  { name: "MAMMUT", price: "$12.00", image: homeOffice },
+  { name: "ARKELSTORP", price: "$65.00", image: kursi },
 ]);
 </script>
 
