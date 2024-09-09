@@ -1,6 +1,6 @@
 <!-- src/components/Header.vue -->
 <template>
-  <header class="container header header-desktop">
+  <header class="header header-desktop">
     <a href="#" class="logo">AIKE</a>
     <nav class="navbar">
       <ul class="nav-links">

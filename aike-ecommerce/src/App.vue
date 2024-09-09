@@ -6,6 +6,8 @@
     <HomeSection />
     <ProductSwiper />
     <CategorySwiper />
+    <BottomSection />
+    <CollectionSection />
     <Footer />
   </div>
 </template>
@@ -16,6 +18,8 @@ import MobileMenu from "./components/MobileMenu.vue";
 import HomeSection from "./components/HomeSection.vue";
 import ProductSwiper from "./components/ProductSwiper.vue";
 import CategorySwiper from "./components/CategorySwiper.vue";
+import BottomSection from "./components/BottomSection.vue";
+import CollectionSection from "./components/CollectionSection.vue";
 import Footer from "./components/Footer.vue";
 </script>
 

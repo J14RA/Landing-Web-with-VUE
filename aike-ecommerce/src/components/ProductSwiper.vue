@@ -1,12 +1,16 @@
 <!-- src/components/ProductSwiper.vue -->
 <template>
-  <div class="product-swiper">
+  <div class="container product-swiper">
+    <div class="product-title">
+      <a href="#" class="btn-normal">Popular</a>
+      <p class="text-xl">Furniture For Sale</p>
+    </div>
     <swiper
       ref="mySwiper"
       :modules="[Navigation, Pagination]"
       :navigation="{
-        nextEl: '.next-button',
-        prevEl: '.prev-button',
+        nextEl: '.product-next-button',
+        prevEl: '.product-prev-button',
       }"
       pagination
       :breakpoints="{
@@ -25,10 +29,10 @@
         <div class="product-price">{{ product.price }}</div>
       </swiper-slide>
     </swiper>
-    <div class="swiper-button-prev prev-button">
+    <div class="swiper-button-prev product-prev-button">
       <img :src="arrowLeft" alt="Previous" />
     </div>
-    <div class="swiper-button-next next-button">
+    <div class="swiper-button-next product-next-button">
       <img :src="arrowRight" alt="Next" />
     </div>
   </div>
@@ -46,8 +50,8 @@ import eiger from "@/assets/img/Kursi.jpg";
 import kallax from "@/assets/img/living-romm-2.jpg";
 import mammut from "@/assets/img/picture-frame-by-velvet-armchair.jpg";
 import arkelstrop from "@/assets/img/vertical-shot-wooden-chair-white.jpg";
-import arrowLeft from "@/assets/img/vertical-shot-wooden-chair-white.jpg";
-import arrowRight from "@/assets/img/vertical-shot-wooden-chair-white.jpg";
+import arrowLeft from "@/assets/img/svg/arrow-left-svgrepo-com.svg";
+import arrowRight from "@/assets/img/svg/arrow-right-svgrepo-com.svg";
 
 const products = ref([
   { name: "CARFIL", price: "$15.00", image: carvil },
@@ -64,52 +68,10 @@ const products = ref([
   position: relative;
 }
 
-.product-card {
-  position: relative;
-  width: 100%;
-  height: auto;
-  padding: 2rem 1rem;
-}
-
-.product-title {
-  padding: 1rem;
-  text-align: center;
-  align-items: center;
-}
-
-.product-card img {
-  height: 96%;
-  width: 100%;
-  object-fit: cover;
-}
-
-.product-name {
+.product-swiper .swiper-button-prev,
+.product-swiper .swiper-button-next {
+  top: var(--swiper-navigation-top-offset, 60%);
   position: absolute;
-  bottom: 20px;
-  left: 20px;
-  padding: 5px 10px;
-  font-weight: lighter;
-  padding-bottom: 2rem;
-}
-
-.product-price {
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
-  padding: 5px 10px;
-  font-weight: lighter;
-  padding-bottom: 2rem;
-}
-
-.swiper-button-prev::after,
-.swiper-button-next::after {
-  display: none;
-}
-
-.prev-button,
-.next-button {
-  position: absolute;
-  top: var(--swiper-navigation-top-offset, 50%);
   width: calc(var(--swiper-navigation-size) / 44 * 27);
   height: var(--swiper-navigation-size);
   margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
@@ -120,16 +82,16 @@ const products = ref([
   justify-content: center;
 }
 
-.prev-button {
+.product-swiper .product-prev-button {
   left: 10px;
 }
 
-.next-button {
+.product-swiper .product-next-button {
   right: 10px;
 }
 
-.prev-button img,
-.next-button img {
+.product-swiper .product-prev-button img,
+.product-swiper .product-next-button img {
   width: 30px;
   height: 30px;
   fill: white;

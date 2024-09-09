@@ -1,6 +1,7 @@
 <!-- src/components/MobileMenu.vue -->
 <template>
-  <div class="header-mobile">
+  <div class="header header-mobile">
+    <a href="#" class="logo">AIKE</a>
     <button type="button" class="toggle-btn" @click="toggleDropdown">
       <img :src="navBut" alt="Navigation Toggle" />
     </button>

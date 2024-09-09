@@ -42,7 +42,7 @@
           <div class="input-container">
             <input type="text" placeholder="Your email" required />
             <button type="submit">
-              <img src=".src/img/svg/arrow-sm-right-svgrepo-com.svg" alt="" />
+              <img :src="arrowRight" alt="" />
             </button>
           </div>
         </form>
@@ -58,6 +58,7 @@
 
 <script setup>
 import { reactive } from "vue";
+import arrowRight from "@/assets/img/svg/arrow-sm-right-svgrepo-com.svg";
 
 const dropdowns = reactive({
   company: false,

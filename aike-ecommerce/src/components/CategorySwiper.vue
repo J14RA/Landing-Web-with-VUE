@@ -1,12 +1,16 @@
 <!-- src/components/CategorySwiper.vue -->
 <template>
-  <div class="category-swiper">
+  <div class="container category-swiper">
+    <div class="category-title">
+      <a href="#" class="btn-normal">Category</a>
+      <p class="text-xl">Design your perfect home</p>
+    </div>
     <swiper
       ref="mySwiper"
       :modules="[Navigation, Pagination]"
       :navigation="{
-        nextEl: '.next-button',
-        prevEl: '.prev-button',
+        nextEl: '.category-next-button',
+        prevEl: '.category-prev-button',
       }"
       pagination
       :breakpoints="{
@@ -24,10 +28,10 @@
         <div class="category-name">{{ category.name }}</div>
       </swiper-slide>
     </swiper>
-    <div class="swiper-button-prev prev-button">
+    <div class="swiper-button-prev category-prev-button">
       <img :src="arrowLeft" alt="Previous" />
     </div>
-    <div class="swiper-button-next next-button">
+    <div class="swiper-button-next category-next-button">
       <img :src="arrowRight" alt="Next" />
     </div>
   </div>
@@ -44,8 +48,8 @@ import diningRoom from "@/assets/img/home-office.jpg";
 import homeOffice from "@/assets/img/Kursi.jpg";
 import bedRoom from "@/assets/img/living-romm-2.jpg";
 import outDoor from "@/assets/img/picture-frame-by-velvet-armchair.jpg";
-import arrowLeft from "@/assets/img/vertical-shot-wooden-chair-white.jpg";
-import arrowRight from "@/assets/img/vertical-shot-wooden-chair-white.jpg";
+import arrowLeft from "@/assets/img/svg/arrow-left-svgrepo-com.svg";
+import arrowRight from "@/assets/img/svg/arrow-right-svgrepo-com.svg";
 
 const categories = ref([
   { name: "Living Room", image: livingRoom },
@@ -62,32 +66,8 @@ const categories = ref([
   position: relative;
 }
 
-.category-card {
-  padding: 20px;
-  text-align: left;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-.category-card img {
-  width: 100%;
-  height: 80%;
-  padding-bottom: 1.5rem;
-  object-fit: cover;
-}
-
-.category-name {
-  font-weight: lighter;
-}
-
-.swiper-button-prev::after,
-.swiper-button-next::after {
-  display: none;
-}
-
-.prev-button,
-.next-button {
+.category-swiper .swiper-button-prev,
+.category-swiper .swiper-button-next {
   position: absolute;
   top: var(--swiper-navigation-top-offset, 50%);
   width: calc(var(--swiper-navigation-size) / 44 * 27);
@@ -100,16 +80,16 @@ const categories = ref([
   justify-content: center;
 }
 
-.prev-button {
+.category-swiper .category-prev-button {
   left: 10px;
 }
 
-.next-button {
+.category-swiper .category-next-button {
   right: 10px;
 }
 
-.prev-button img,
-.next-button img {
+.category-swiper .category-prev-button img,
+.category-swiper .category-next-button img {
   width: 30px;
   height: 30px;
   fill: white;
